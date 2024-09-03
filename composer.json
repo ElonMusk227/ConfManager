@@ -1,0 +1,29 @@
+{
+    "name": "assogba_isaac/confmanager",
+    "require-dev": {
+        "composer": "^2.7"
+    },
+    "license": "mit",
+    "autoload": {
+        "psr-4": {
+            "App\\Conference\\": "src/Conference/",
+            "App\\Author\\": "src/Author/",
+            "App\\Relector\\": "src/Relector/",
+            "App\\Article\\": "src/Article/",
+            "App\\Chair\\": "src/Chair/",
+            "App\\Domaine\\": "src/Domaine/",
+            "App\\Entreprise\\": "src/Entreprise/",
+            "App\\Relect_art\\": "src/Relect_art/",
+            "App\\Statut\\": "src/Statut/",
+            "App\\Universite\\": "src/Universite/",
+            "App\\Connection\\": "src/Connection/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Assogba Isaac",
+            "email": "assogbaisaac321@gmail.com"
+        }
+    ],
+    "require": {}
+}

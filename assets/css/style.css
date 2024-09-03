@@ -1,0 +1,15 @@
+.access{
+    margin: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.conf-card{
+    margin: 100px;
+    padding: 20px;
+    
+}
+.article{
+    width: 1200px;
+}

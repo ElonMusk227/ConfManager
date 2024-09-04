@@ -24,8 +24,8 @@
 </head>
 <body class="bg-gray-200 justify-content-center text-center">
     <h1 class="font-weight-bold">Creators</h1>
-    <div class="container py-5" style="margin-left:300px">
-        <div class="row ">
+    <div class="container py-5">
+        <div class="row justify-content-center text-center">
             <div class="card mb-3 mx-3 justify-content-center text-center" style="width: 18rem;  padding:0px">
                 <img src="./assets/img/drake.jpg" class="card-img-top">
                 <div class="card-body">

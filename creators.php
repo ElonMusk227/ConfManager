@@ -27,11 +27,11 @@
     <div class="container py-5">
         <div class="row justify-content-center text-center">
             <div class="card mb-3 mx-3 justify-content-center text-center" style="width: 18rem;  padding:0px">
-                <img src="./assets/img/drake.jpg" class="card-img-top">
+                <img src="./assets/img/assogba.jpg" style="height:288px" class="card-img-top">
                 <div class="card-body">
                     <h5 class="card-title">Assogba Charles Isaac</h5>
                     <h6 class="card-subtitle">Isaac's Code</h6>
-                    <a href="#" class=" mt-3 btn btn-primary">Go somewhere</a>
+                    <a href="#" class=" mt-3 btn btn-primary">About him</a>
                 </div>  
             </div>
 

@@ -5,7 +5,7 @@ use App\Connection\Connection;
 $pdo = Connection::getInstance()->getConnection();
 $message = ''; 
 
-$selects = $pdo->query('SELECT * FROM VERFICATION_RELECTEUR')->fetchAll(PDO::FETCH_ASSOC);
+$selects = $pdo->query('SELECT * FROM VERIFICATION_RELECTEUR')->fetchAll(PDO::FETCH_ASSOC);
 
 if (!empty($_POST['email']) && !empty($_POST['verification_code'])) {
     $email = htmlspecialchars($_POST['email']);

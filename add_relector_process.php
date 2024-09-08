@@ -26,7 +26,7 @@
                     $relecteurs = $pdo->query('SELECT ID_RELECTEUR FROM RELECTEUR')->fetchAll(PDO::FETCH_ASSOC);
                     $id_relecteur = (int)$relecteurs[count($relecteurs) - 1 ]['ID_RELECTEUR'];
                     $assignation = $pdo->prepare('INSERT INTO ASSIGNATION(ID_ASSIGNATION, ID_RELECTEUR, ID_ARTICLE, EMAIL, ASSIGNED_AT) VALUES (?,?,?,?,?)')->execute([null, $id_relecteur, $id_article, $mail_relecteur,  $created_at]);
-                    if($insert_code = $pdo->prepare('INSERT INTO VERFICATION_RELECTEUR(EMAIL, ID_RELECTEUR, VERIFICATION_CODE, ID_ARTICLE, CREATED_AT) VALUES (?,?,?,?,?)')->execute([$mail_relecteur, $id_relecteur, $code, $id_article, $created_at])){
+                    if($insert_code = $pdo->prepare('INSERT INTO VERIFICATION_RELECTEUR(EMAIL, ID_RELECTEUR, VERIFICATION_CODE, ID_ARTICLE, CREATED_AT) VALUES (?,?,?,?,?)')->execute([$mail_relecteur, $id_relecteur, $code, $id_article, $created_at])){
                         $code_mess = 'Code sent successfully';
                         $article = $pdo->query('SELECT TITLE FROM ARTICLE WHERE ID_ARTICLE = '.$id_article)->fetch(PDO::FETCH_ASSOC);
                         $title_article = (string)$article['TITLE'];
@@ -49,7 +49,7 @@
                     }
                 }
             }else{
-                    $id_relecteur = $pdo->query('SELECT ID_RELECTEUR FROM VERFICATION_RELECTEUR WHERE EMAIL='.$mail_relecteur)->fetch(PDO::FETCH_ASSOC);
+                    $id_relecteur = $pdo->query('SELECT ID_RELECTEUR FROM VERIFICATION_RELECTEUR WHERE EMAIL='.$mail_relecteur)->fetch(PDO::FETCH_ASSOC);
                     $assignation = $pdo->prepare('INSERT INTO ASSIGNATION(ID_ASSIGNATION, ID_RELECTEUR, ID_ARTICLE, EMAIL, ASSIGNED_AT) VALUES (?,?,?,?,?)')->execute([null, $id_relecteur, $id_article, $mail_relecteur]);
                     $article = $pdo->query('SELECT TITLE FROM ARTICLE WHERE ID_ARTICLE = '.$id_article)->fetch(PDO::FETCH_ASSOC);
                     $title_article = (string)$article['TITLE'];

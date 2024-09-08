@@ -5,7 +5,7 @@
         private static $instance = null;
         private $pdo;
         function __construct(){
-            $this->pdo = new PDO('mysql:host=localhost;dbname=confmanager','root', '');
+            $this->pdo = new PDO('pgsql:host=aws-0-eu-central-1.pooler.supabase.com;port=6543;dbname=postgres;user=postgres.awgftcohetqdwzprzjlz;password=Conf.Manager@2005.dev');
             $this->pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         }
         public static function getInstance(){

@@ -1,5 +1,7 @@
 <?php 
-    require './connection/connection.php';
+    require_once __DIR__.'\vendor\autoload.php';
+    use App\Connection\Connection;
+    $pdo = Connection::getInstance()->getConnection();
     $articles = $pdo->query('SELECT ID_ARTICLE, TITLE FROM ARTICLE')->fetchAll(PDO::FETCH_ASSOC);
     if(!empty($_POST['article'])){
         $id_article = $_POST['article'];

@@ -21,7 +21,7 @@
                 'nom' => $result['nom'],
                 'mdp' => $result['mdp']
             ];
-            header('Location: index.php');
+            header('Location: index2.php');
         } else {
             $error = 'Incorrect username or password';
         }
